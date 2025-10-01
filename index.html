@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vicente Hernández - Profesional en Finanzas | Ciencia de Datos y Machine Learning">
+<title>Vicente Hernández | Portfolio</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    /* Gradiente animado de fondo para secciones hero y footer */
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .gradient-bg {
+        background: linear-gradient(270deg, #667eea, #3b82f6, #06b6d4, #14b8a6);
+        background-size: 800% 800%;
+        animation: gradient 15s ease infinite;
+    }
+
+    /* Animación de entrada */
+    .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+    .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Tooltip simple para botones */
+    .tooltip:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background: #1f2937;
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.3rem;
+        font-size: 0.8rem;
+        top: -2rem;
+        white-space: nowrap;
+        z-index: 10;
+    }
+</style>
+</head>
+
+<body class="font-Inter bg-gray-50 text-gray-800 transition-colors duration-300">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 shadow-md bg-white">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold text-blue-600">VH</div>
+        <ul class="flex items-center space-x-6">
+            <li><a href="#inicio" class="hover:text-blue-500 font-medium">Inicio</a></li>
+            <li><a href="#habilidades" class="hover:text-blue-500 font-medium">Habilidades</a></li>
+            <li><a href="#experiencia" class="hover:text-blue-500 font-medium">Experiencia</a></li>
+            <li><a href="#educacion" class="hover:text-blue-500 font-medium">Educación</a></li>
+            <li><a href="#proyectos" class="hover:text-blue-500 font-medium">Proyectos</a></li>
+            <li><a href="#contacto" class="hover:text-blue-500 font-medium">Contacto</a></li>
+            <li>
+                <button id="themeToggle" class="p-2 rounded-full border border-gray-300 hover:border-blue-500 transition">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section id="inicio" class="gradient-bg text-white py-20">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+        <img src="https://github.com/Vicente-Hernandez.png" alt="Vicente Hernández" class="w-52 h-52 rounded-full border-4 border-white shadow-xl">
+        <div class="text-center md:text-left space-y-4">
+            <h1 class="text-4xl md:text-5xl font-bold">Vicente Hernández Aránguiz</h1>
+            <h2 class="text-xl md:text-2xl font-light">Profesional en Finanzas | Ciencia de Datos y Machine Learning</h2>
+            <p class="max-w-lg mx-auto md:mx-0">Apasionado por transformar datos en decisiones estratégicas y liderar la innovación digital en pymes chilenas.</p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+                <a href="#contacto" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Contáctame
+                </a>
+                <a href="#" id="downloadCV" class="border border-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-white hover:text-blue-600 transition">
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+            </div>
+            <div class="flex justify-center md:justify-start gap-4 mt-4">
+                <a href="https://www.linkedin.com/in/vicentehernandeza/" target="_blank" class="bg-white text-blue-600 p-3 rounded-full shadow hover:scale-110 transition">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Vicente-Hernandez" target="_blank" class="bg-white text-gray-800 p-3 rounded-full shadow hover:scale-110 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:vicenteahernandeza@gmail.com" class="bg-white text-red-600 p-3 rounded-full shadow hover:scale-110 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades" class="py-20">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 relative">Habilidades Técnicas</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+                <h3 class="text-blue-600 font-semibold text-lg mb-4"><i class="fas fa-code"></i> Lenguajes</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Python</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">SQL</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+                <h3 class="text-blue-600 font-semibold text-lg mb-4"><i class="fas fa-brain"></i> Data Science & ML</h3>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Pandas</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Polars</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">NumPy</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Scikit-Learn</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">PyTorch</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">TensorFlow</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">XGBoost</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">LightGBM</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">CatBoost</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Optuna</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">SHAP</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">PyCaret</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Statsmodels</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">yfinance</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+                <h3 class="text-blue-600 font-semibold text-lg mb-4"><i class="fas fa-chart-bar"></i> Visualización</h3>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Matplotlib</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Seaborn</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Plotly</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Streamlit</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Dash</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Power BI</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Tableau</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+                <h3 class="text-blue-600 font-semibold text-lg mb-4"><i class="fas fa-cogs"></i> MLOps</h3>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">MLflow</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Git</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Jupyter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resto de secciones (Experiencia, Educación, Proyectos y Contacto) se pueden replicar usando el mismo estilo moderno Tailwind y animaciones "fade-up" -->
+
+</main>
+
+<!-- Footer -->
+<footer class="gradient-bg text-white py-8 text-center">
+    <p>&copy; 2026 Vicente Hernández. Todos los derechos reservados.</p>
+    <p class="mt-2 text-sm">Transformando datos en decisiones estratégicas</p>
+</footer>
+
+<script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    themeToggle.addEventListener('click', () => {
+        const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if(target) target.scrollIntoView({behavior: 'smooth'});
+        });
+    });
+
+    // Download CV
+    document.getElementById('downloadCV').addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Por favor, sube tu CV en PDF al repositorio y actualiza esta URL');
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add('show');
+        });
+    }, {threshold:0.2});
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
