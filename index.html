@@ -362,6 +362,184 @@
             line-height: 1.6;
         }
 
+        .cv-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4rem 5%;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cv-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            margin-top: 1rem;
+        }
+
+        .cv-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .cv-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 3rem;
+        }
+
+        .cv-block {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .cv-block h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cv-item {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid rgba(99, 102, 241, 0.3);
+            margin-left: 1rem;
+        }
+
+        .cv-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .cv-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .cv-item h4 {
+            color: var(--light);
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .cv-item .company {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-item .date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .cv-item p, .cv-item ul {
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-top: 0.5rem;
+        }
+
+        .cv-item ul {
+            padding-left: 1.5rem;
+        }
+
+        .cv-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cert-item {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .cert-item h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cert-item p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .skills-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background: rgba(99, 102, 241, 0.08);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .skill-category h5 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .skill-category p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -509,29 +687,198 @@
             margin-top: 2rem;
         }
 
-        @media (max-width: 768px) {
+        /* Tablets */
+        @media (max-width: 1024px) {
+            section {
+                padding: 5rem 3%;
+            }
+
             .hero h1 {
-                font-size: 3rem;
+                font-size: 4rem;
             }
 
             .hero .subtitle {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
+            }
+
+            .about-content {
+                gap: 3rem;
+            }
+
+            .cv-block {
+                padding: 2rem;
+            }
+        }
+
+        /* Mobile Landscape & Small Tablets */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 3%;
             }
 
             nav ul {
-                gap: 1.5rem;
-                font-size: 0.9rem;
+                gap: 1.2rem;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
+
+            section {
+                padding: 4rem 5%;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero .description {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .btn {
+                width: 100%;
             }
 
             .projects-grid,
             .skills-grid,
-            .education-grid {
+            .education-grid,
+            .cert-grid {
                 grid-template-columns: 1fr;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .skill-card,
+            .project-card,
+            .education-card,
+            .cv-block {
+                padding: 1.5rem;
+            }
+
+            .cv-item {
+                padding-left: 1.5rem;
+            }
+
+            .cv-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cv-download-btn {
+                font-size: 0.95rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .skills-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .social-links {
+                gap: 1.5rem;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* Mobile Portrait */
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .hero .description {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .skill-card h3,
+            .project-content h3,
+            .cv-block h3 {
+                font-size: 1.2rem;
+            }
+
+            .tech-tags,
+            .project-tags {
+                gap: 0.3rem;
+            }
+
+            .tech-tag,
+            .tag {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .orb1, .orb2, .orb3 {
+                opacity: 0.15;
+            }
+        }
+
+        /* Very Small Devices */
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            nav ul {
+                font-size: 0.7rem;
+                gap: 0.5rem;
+            }
+
+            section {
+                padding: 3rem 4%;
             }
         }
 
@@ -567,7 +914,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre Mí</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#cv">CV</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -575,12 +922,14 @@
 
     <section id="inicio" class="hero">
         <h1>Vicente Hernández</h1>
-        <p class="subtitle">Data Scientist & Financial Analytics Expert</p>
+        <p class="subtitle">Founder & CEO at DataVic | Data Scientist | Financial Expert</p>
         <p class="description">
-            Experto en <strong>Finanzas</strong> y <strong>Transformación Digital</strong> con especialización en 
-            <strong>Ciencia de Datos</strong> y <strong>Machine Learning</strong>. Combino sólida experiencia 
-            en el sector financiero con habilidades técnicas avanzadas para desarrollar soluciones innovadoras 
-            basadas en datos que transforman la toma de decisiones estratégicas.
+            Profesional con amplia experiencia en <strong>Finanzas, Administración y Control de Gestión</strong> 
+            en empresas del retail financiero. Como fundador y CEO de <strong>DataVic</strong>, lidero la visión 
+            estratégica hacia la excelencia en Data Science, especializándome en formular soluciones integrales, 
+            establecer alianzas estratégicas y diseñar transformación digital personalizada para PyMES en Chile. 
+            Actualmente adquiriendo formación en <strong>Big Data y Data Analytics</strong> para fortalecer 
+            mis capacidades en esta área.
         </p>
         <div class="btn-group">
             <a href="https://github.com/Vicente-Hernandez" class="btn btn-primary" target="_blank">Ver GitHub</a>
@@ -594,34 +943,49 @@
             <h2>Sobre Mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Mi Enfoque</h3>
+                    <h3>Mi Trayectoria</h3>
                     <p>
-                        Mi pasión por los datos y las finanzas me ha llevado a especializarme en el uso de 
-                        tecnologías avanzadas para resolver problemas complejos del mundo financiero. 
-                        Actualmente enfocado en proyectos de <strong>ciencia de datos aplicada a finanzas</strong>, 
-                        explorando cómo el análisis avanzado y el machine learning pueden transformar la industria.
+                        Con más de <strong>15 años de experiencia</strong> en el sector financiero e inversiones, 
+                        he desarrollado una carrera que combina expertise financiero con innovación tecnológica. 
+                        Como <strong>Founder y CEO de DataVic</strong>, mi misión es democratizar el acceso a 
+                        soluciones de Data Science para PyMES en Chile.
                     </p>
                     <p>
-                        Con formación especializada de instituciones líderes como Stanford University y Google, 
-                        combino teoría de vanguardia con aplicación práctica para generar valor real en cada proyecto.
+                        Mi background incluye roles en empresas como <strong>Marubeni Corporation</strong>, 
+                        <strong>Cencosud Scotiabank</strong> y <strong>Autofin Chile</strong>, donde he liderado 
+                        estrategias comerciales, análisis de mercado y transformación digital. Paralelamente, como 
+                        socio en <strong>Inversiones OBT</strong> desde 2010, gestiono un portafolio de inversiones 
+                        inmobiliarias aplicando análisis de datos para optimizar decisiones de inversión.
+                    </p>
+                    <p>
+                        Mi enfoque combina <strong>rigor analítico, visión estratégica y pasión por la innovación</strong>, 
+                        buscando siempre transformar datos en valor real para las organizaciones.
                     </p>
                 </div>
                 <div class="expertise-list">
                     <div class="expertise-item">
-                        <h4>💼 Finanzas</h4>
-                        <p>Control de Gestión, Análisis Financiero, Retail Financiero</p>
+                        <h4>🚀 Emprendimiento & Liderazgo</h4>
+                        <p>Fundador de DataVic, liderando transformación digital para PyMES</p>
                     </div>
                     <div class="expertise-item">
-                        <h4>📊 Data Science</h4>
-                        <p>Análisis Exploratorio, Feature Engineering, Modelado Predictivo</p>
+                        <h4>💼 Finanzas & Gestión</h4>
+                        <p>Control de Gestión, Análisis Financiero, Retail Financiero, Inversiones</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h4>📊 Data Science & Analytics</h4>
+                        <p>Análisis Exploratorio, Feature Engineering, Modelado Predictivo, Big Data</p>
                     </div>
                     <div class="expertise-item">
                         <h4>🤖 Machine Learning</h4>
-                        <p>Supervised Learning, Deep Learning, Model Optimization</p>
+                        <p>Supervised/Unsupervised Learning, Detección de Anomalías, Deep Learning</p>
                     </div>
                     <div class="expertise-item">
-                        <h4>🚀 Business</h4>
-                        <p>Transformación Digital, Estrategia, Alianzas Estratégicas</p>
+                        <h4>🏢 Estrategia Comercial</h4>
+                        <p>Alianzas Estratégicas, Desarrollo de Negocios, Mercado Automotriz</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h4>🏘️ Inversiones Inmobiliarias</h4>
+                        <p>Gestión de propiedades, análisis de mercado, portfolio management</p>
                     </div>
                 </div>
             </div>
@@ -723,6 +1087,316 @@
                     <h3>🚀 Advanced ML Bootcamp</h3>
                     <p><strong>Talento Digital</strong></p>
                     <p>Entrenamiento avanzado en técnicas modernas de machine learning y deep learning aplicado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <div class="cv-header">
+                <h2>Currículum Vitae</h2>
+                <p style="opacity: 0.8; margin-bottom: 1rem;">Experiencia profesional, formación y certificaciones</p>
+                <a href="#" class="cv-download-btn" onclick="alert('Para descargar el CV en PDF, sube tu archivo CV.pdf al repositorio y actualiza este enlace.'); return false;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Descargar CV en PDF
+                </a>
+            </div>
+
+            <div class="cv-content">
+                <!-- Experiencia Profesional -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                        </svg>
+                        Experiencia Profesional
+                    </h3>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Founder and CEO</h4>
+                                <p class="company">DataVic</p>
+                            </div>
+                            <span class="date">Enero 2024 - Presente</span>
+                        </div>
+                        <p>Liderando la visión estratégica de la empresa hacia la excelencia en Data Science.</p>
+                        <ul>
+                            <li>Formulación de soluciones end-to-end en ciencia de datos para PyMES</li>
+                            <li>Establecimiento de alianzas estratégicas en el ecosistema de innovación</li>
+                            <li>Diseño personalizado de transformación digital para empresas chilenas</li>
+                            <li>Impulso del crecimiento sostenible y toma de decisiones basada en datos</li>
+                            <li>Posicionamiento de DataVic como referente en innovación empresarial en Chile</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Financial Service Advisor</h4>
+                                <p class="company">Autofin Chile</p>
+                            </div>
+                            <span class="date">Abril 2025 - Presente</span>
+                        </div>
+                        <ul>
+                            <li>Perfilamiento financiero de clientes para créditos automotrices</li>
+                            <li>Análisis de mercado automotriz para identificar oportunidades de crecimiento</li>
+                            <li>Diseño e implementación de estrategias comerciales para impulsar ventas</li>
+                            <li>Construcción de alianzas estratégicas con concesionarias e instituciones financieras</li>
+                            <li>Liderazgo en proyectos innovadores para diversificación de servicios financieros</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Financial Service Advisor</h4>
+                                <p class="company">Marubeni Corporation</p>
+                            </div>
+                            <span class="date">Abril 2022 - Mayo 2025</span>
+                        </div>
+                        <ul>
+                            <li>Evaluación de perfiles financieros de clientes para créditos automotrices</li>
+                            <li>Promoción y venta de productos financieros especializados</li>
+                            <li>Seguimiento y control de participación en el mercado automotriz</li>
+                            <li>Despliegue de estrategias comerciales y generación de alianzas</li>
+                            <li>Implementación de proyectos y nuevos emprendimientos</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Partner - Asesor Financiero y Administración</h4>
+                                <p class="company">Inversiones OBT</p>
+                            </div>
+                            <span class="date">Enero 2010 - Presente</span>
+                        </div>
+                        <p>Inversiones inmobiliarias, compra, gestión y arrendamiento de propiedades.</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Commercial Executive</h4>
+                                <p class="company">Cencosud Scotiabank</p>
+                            </div>
+                            <span class="date">Octubre 2019 - Marzo 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Sales Executive & Financial Advisor</h4>
+                                <p class="company">Autofin Chile</p>
+                            </div>
+                            <span class="date">Enero 2019 - Septiembre 2019</span>
+                        </div>
+                        <p>Perfilamiento de clientes, evaluación financiera, promoción de productos y control de participación en mercado automotriz.</p>
+                    </div>
+                </div>
+
+                <!-- Formación Académica y Certificaciones -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                        </svg>
+                        Formación Académica
+                    </h3>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Ingeniería en Gestión mención Finanzas</h4>
+                                <p class="company">Duoc UC</p>
+                            </div>
+                            <span class="date">2017 - 2020</span>
+                        </div>
+                        <p>Control de Gestión / Finanzas</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div>
+                                <h4>Técnico en Gestión mención Finanzas</h4>
+                                <p class="company">Duoc UC</p>
+                            </div>
+                            <span class="date">2017 - 2018</span>
+                        </div>
+                        <p>Contabilidad y Finanzas</p>
+                    </div>
+                </div>
+
+                <!-- Certificaciones -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        Certificaciones Profesionales
+                    </h3>
+                    
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <h5>🎯 Machine Learning Specialization</h5>
+                            <p><strong>Stanford University & DeepLearning.AI</strong></p>
+                            <p>Especialización completa en algoritmos de ML, redes neuronales y sistemas de aprendizaje automático</p>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <h5>📊 Google Data Analytics</h5>
+                            <p><strong>Google Career Certificate</strong></p>
+                            <p>Certificación profesional en análisis de datos, visualización y toma de decisiones basada en datos</p>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <h5>💻 Ciencia de Datos - Especialidad</h5>
+                            <p><strong>Certificación Profesional</strong></p>
+                            <p>Detección de anomalías, aprendizaje supervisado y no supervisado</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>🐍 Python Full-Stack Trainee</h5>
+                            <p><strong>Coding Dojo</strong></p>
+                            <p>Tecnología de sistemas computacionales</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>🎓 Python Pro Bootcamp</h5>
+                            <p><strong>The App Brewery</strong></p>
+                            <p>Bootcamp profesional de Python</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>⚙️ Data Engineering for Everyone</h5>
+                            <p><strong>Certificación Técnica</strong></p>
+                            <p>Fundamentos de ingeniería de datos</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>🔬 Python For Data Science</h5>
+                            <p><strong>Certificación Técnica</strong></p>
+                            <p>Python aplicado a ciencia de datos</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>💼 Gestión de Financiamiento e Inversiones</h5>
+                            <p><strong>Certificación Financiera</strong></p>
+                            <p>Análisis y gestión de inversiones</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>📈 Elaboración de Informes Financieros</h5>
+                            <p><strong>Certificación Profesional</strong></p>
+                            <p>Reportería financiera y administrativa</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <h5>💡 Tecnología de la Información</h5>
+                            <p><strong>AWAKELAB</strong></p>
+                            <p>Abril 2023 - Junio 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competencias Técnicas -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                        Competencias Técnicas Destacadas
+                    </h3>
+                    
+                    <div class="skills-summary">
+                        <div class="skill-category">
+                            <h5>Machine Learning</h5>
+                            <p>Scikit-learn, XGBoost, LightGBM, CatBoost, Optuna, PyCaret</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Deep Learning</h5>
+                            <p>PyTorch, TensorFlow, Keras, Redes Neuronales</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Análisis de Datos</h5>
+                            <p>Pandas, Polars, NumPy, Statsmodels, yfinance</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Visualización</h5>
+                            <p>Plotly, Streamlit, Power BI, Tableau, Seaborn</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Bases de Datos</h5>
+                            <p>SQL, PostgreSQL, Consultas avanzadas</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>MLOps</h5>
+                            <p>MLflow, Git, Model Tracking, SHAP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Idiomas y Habilidades Blandas -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        Idiomas
+                    </h3>
+                    
+                    <div class="skills-summary">
+                        <div class="skill-category">
+                            <h5>🇪🇸 Español</h5>
+                            <p>Nativo</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>🇬🇧 Inglés</h5>
+                            <p>Profesional Completo</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>🇫🇷 Francés</h5>
+                            <p>Básico Laboral</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>🇮🇹 Italiano</h5>
+                            <p>Básico Laboral</p>
+                        </div>
+                        <div class="skill-category">
+                            <h5>🏴󠁥󠁳󠁣󠁴󠁿 Catalán</h5>
+                            <p>Profesional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Habilidades Profesionales -->
+                <div class="cv-block">
+                    <h3>
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                        Habilidades Profesionales Clave
+                    </h3>
+                    
+                    <div class="cv-item">
+                        <ul style="border-left: none; padding-left: 0;">
+                            <li>Liderazgo estratégico en transformación digital y data science</li>
+                            <li>Análisis financiero avanzado y control de gestión</li>
+                            <li>Desarrollo de soluciones end-to-end en ciencia de datos</li>
+                            <li>Construcción y gestión de alianzas estratégicas</li>
+                            <li>Expertise en retail financiero y mercado automotriz</li>
+                            <li>Gestión de inversiones inmobiliarias</li>
+                            <li>Implementación de proyectos de innovación empresarial</li>
+                            <li>Comunicación efectiva con stakeholders y equipos multidisciplinarios</li>
+                            <li>Emprendimiento y gestión empresarial</li>
+                            <li>Toma de decisiones basada en datos y análisis predictivo</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -837,3 +1511,94 @@
                 <div class="social-links">
                     <a href="https://github.com/Vicente-Hernandez" target="_blank" title="GitHub">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vicentehernandeza/" target="_blank" title="LinkedIn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:vicenteahernandeza@gmail.com" title="Email">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vicente Hernández. Transformando datos en decisiones estratégicas.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de aparición al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .project-card, .education-card, .cv-item, .cert-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Efecto parallax en los orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.gradient-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 50;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+
+        // Highlight active navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = 'var(--primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
