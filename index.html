@@ -11,6 +11,12 @@
     <style>
         /* Estilos personalizados para complementar Tailwind */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        /* Habilita el desplazamiento suave para los enlaces de anclaje */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #020617;
@@ -311,7 +317,7 @@
                         <div class="absolute left-0 h-full w-0.5 bg-slate-700"></div>
                         <div class="absolute left-[-9px] sm:left-[-7px] bg-slate-700 h-5 w-5 rounded-full border-4 border-slate-900 group-hover:bg-indigo-600 transition"></div>
                         <h3 class="font-bold text-lg text-slate-100">Financial Service Advisor</h3>
-                         <span class="ml-auto text-sm text-slate-400">2022 - Presente</span>
+                         <span class="ml-auto text-sm text-slate-400">2022 - 2025</span>
                     </div>
                     <p class="text-indigo-400 font-medium mb-1">Marubeni & Autofin</p>
                     <p class="text-slate-400 text-sm">Análisis de mercado, diseño de estrategias comerciales y perfilamiento financiero en el sector automotriz.</p>
@@ -377,21 +383,6 @@
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Desplazamiento suave para los enlaces de anclaje
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if(targetElement){
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
             });
         });
 
