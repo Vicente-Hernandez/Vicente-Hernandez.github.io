@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Vicente Hernández Aránguiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2ff; /* Un fondo claro para facilitar la lectura y la impresión */
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Oculta el botón en la versión de impresión */
+        @media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                background-color: #ffffff;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div class="max-w-4xl mx-auto p-8 sm:p-12 bg-white shadow-2xl my-8">
+
+        <!-- Botón para imprimir/guardar -->
+        <div class="text-right mb-8 no-print">
+            <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition inline-flex items-center gap-2">
+                <i data-lucide="printer"></i> Guardar como PDF
+            </button>
+        </div>
+
+        <!-- Encabezado -->
+        <header class="flex flex-col sm:flex-row items-center justify-between mb-10">
+            <div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold gradient-text">Vicente Hernández</h1>
+                <h2 class="text-xl font-semibold text-slate-600 mt-1">Founder en DataVic | Data Scientist | Experto Financiero</h2>
+            </div>
+            <div class="text-sm text-slate-600 mt-6 sm:mt-0 sm:text-right">
+                <p class="flex items-center gap-2 justify-start sm:justify-end"><i data-lucide="mail" class="w-4 h-4 text-indigo-500"></i> vicenteahernandeza@gmail.com</p>
+                <p class="flex items-center gap-2 justify-start sm:justify-end mt-1"><i data-lucide="linkedin" class="w-4 h-4 text-indigo-500"></i> /in/vicentehernandeza</p>
+                <p class="flex items-center gap-2 justify-start sm:justify-end mt-1"><i data-lucide="phone" class="w-4 h-4 text-indigo-500"></i> +56 9 9332 02773</p>
+                <p class="flex items-center gap-2 justify-start sm:justify-end mt-1"><i data-lucide="map-pin" class="w-4 h-4 text-indigo-500"></i> Santiago, Chile</p>
+            </div>
+        </header>
+
+        <!-- Extracto -->
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold border-b-2 border-indigo-200 pb-2 mb-4 text-indigo-700">Extracto Profesional</h3>
+            <p class="text-slate-700 leading-relaxed">
+                Profesional con amplia experiencia en Finanzas, Administración y Control de Gestión en empresas del retail financiero. Como Fundador y CEO de DataVic, lidero la visión estratégica hacia la excelencia en Data Science. Me especializo en formular soluciones integrales, establecer alianzas estratégicas y diseñar transformaciones digitales personalizadas para PyMES. Actualmente, fortaleciendo mis competencias en Big Data y Data Analytics.
+            </p>
+        </section>
+
+        <!-- Columnas Principales -->
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Columna Izquierda (Habilidades e Idiomas) -->
+            <aside class="md:col-span-1">
+                <section>
+                    <h3 class="text-2xl font-bold border-b-2 border-indigo-200 pb-2 mb-4 text-indigo-700">Habilidades</h3>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Data Science:</strong> Pandas, Polars, NumPy</li>
+                        <li><strong>Machine Learning:</strong> Scikit-Learn, XGBoost, PyCaret, Detección de Anomalías, Aprendizaje Supervisado y No Supervisado</li>
+                        <li><strong>Visualización:</strong> Plotly, Streamlit, Power BI</li>
+                        <li><strong>Bases de Datos:</strong> SQL</li>
+                        <li><strong>Finanzas:</strong> Control de Gestión, Análisis Financiero</li>
+                        <li><strong>Liderazgo:</strong> Estrategia de Negocios, Transformación Digital</li>
+                    </ul>
+                </section>
+                <section class="mt-10">
+                    <h3 class="text-2xl font-bold border-b-2 border-indigo-200 pb-2 mb-4 text-indigo-700">Idiomas</h3>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Español:</strong> Nativo</li>
+                        <li><strong>Inglés:</strong> Profesional Completo</li>
+                        <li><strong>Catalán:</strong> Profesional</li>
+                        <li><strong>Francés:</strong> Básico Laboral</li>
+                        <li><strong>Italiano:</strong> Básico Laboral</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Columna Derecha (Experiencia y Educación) -->
+            <main class="md:col-span-2">
+                <section>
+                    <h3 class="text-2xl font-bold border-b-2 border-indigo-200 pb-2 mb-4 text-indigo-700">Experiencia Profesional</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-lg font-bold">Founder & CEO</h4>
+                                <p class="text-sm font-medium text-slate-500">Ene 2024 - Presente</p>
+                            </div>
+                            <p class="font-semibold text-indigo-600">DataVic</p>
+                            <p class="text-slate-700 mt-1 text-sm leading-relaxed">Liderando la visión estratégica y el desarrollo de soluciones de Data Science. Formulación de soluciones end-to-end, establecimiento de alianzas y diseño de transformación digital para PyMES.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-lg font-bold">Financial Service Advisor</h4>
+                                <p class="text-sm font-medium text-slate-500">Abr 2022 - May 2025</p>
+                            </div>
+                            <p class="font-semibold text-indigo-600">Marubeni Corporation & Autofin Chile</p>
+                            <p class="text-slate-700 mt-1 text-sm leading-relaxed">Perfilamiento financiero de clientes para créditos automotrices, análisis de mercado, diseño de estrategias comerciales y construcción de alianzas estratégicas con concesionarios.</p>
+                        </div>
+                        <div>
+                           <div class="flex justify-between items-baseline">
+                                <h4 class="text-lg font-bold">Socio y Asesor Financiero</h4>
+                                <p class="text-sm font-medium text-slate-500">Ene 2010 - Presente</p>
+                            </div>
+                            <p class="font-semibold text-indigo-600">Inversiones OBT</p>
+                            <p class="text-slate-700 mt-1 text-sm leading-relaxed">Inversiones inmobiliarias, incluyendo compra, gestión y arrendamiento de propiedades.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-10">
+                    <h3 class="text-2xl font-bold border-b-2 border-indigo-200 pb-2 mb-4 text-indigo-700">Educación y Certificaciones</h3>
+                     <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-bold">Ingeniería en Gestión, Mención Finanzas</h4>
+                            <p class="font-semibold text-indigo-600">Duoc UC (2017 - 2020)</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Bootcamps en Desarrollo y Tecnología</h4>
+                            <p class="font-semibold text-indigo-600">Coding Dojo & The App Brewery (2021)</p>
+                            <p class="text-slate-700 mt-1 text-sm">Formación intensiva en Python Full-Stack y tecnología de sistemas computacionales.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-lg font-bold">Certificaciones Clave</h4>
+                             <p class="text-slate-700 mt-1 text-sm">Ciencia de Datos (Detección de Anomalías, Aprendizaje Supervisado/No Supervisado), Data Engineering for Everyone, Python para Data Science, Gestión de Financiamiento e Inversiones.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
